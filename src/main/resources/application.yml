@@ -2,11 +2,14 @@ server:
   port: ${PORT:8080}
 
 spring:
+  application:
+    name: my-portfolio
+
   datasource:
     url: ${DB_URL}
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: org.postgresql.Driver
 
   jpa:
     hibernate:
@@ -14,8 +17,14 @@ spring:
     show-sql: false
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: false
+        dialect: org.hibernate.dialect.PostgreSQLDialect
 
-jwt:
-  secret: ${JWT_SECRET}
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
 
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
