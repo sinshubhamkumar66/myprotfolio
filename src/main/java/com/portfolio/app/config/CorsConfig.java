@@ -16,12 +16,12 @@ public class CorsConfig {
 
         CorsConfiguration config = new CorsConfiguration();
 
-        // ✅ Allow frontend origins
         config.setAllowedOrigins(List.of(
                 "http://localhost:5173",
                 "http://localhost:5174",
-                "https://your-frontend.vercel.app" // add later
+                "https://myprotfolio-frontend-eti5l7cij-shubhams-projects-31c38d4e.vercel.app"
         ));
+
 
         // ✅ Allow HTTP methods
         config.setAllowedMethods(List.of(
