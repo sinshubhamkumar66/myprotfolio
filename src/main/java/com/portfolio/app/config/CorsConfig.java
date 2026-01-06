@@ -19,7 +19,7 @@ public class CorsConfig {
         config.setAllowedOrigins(List.of(
                 "http://localhost:5173",
                 "http://localhost:5174",
-                "https://myprotfolio-frontend-eti5l7cij-shubhams-projects-31c38d4e.vercel.app"
+                "https://myprotfolio-frontend-1xh9l48yh-shubhams-projects-31c38d4e.vercel.app"
         ));
 
 
